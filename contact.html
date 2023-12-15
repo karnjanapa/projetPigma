@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigma</title>
+    <!-- ==========css slider========= -->
+    <link rel="stylesheet" href="themes/default/default.css">
+    <link rel="stylesheet" href="nivo-slider.css">
+    <!--  -->
+    
+    <!-- =========burger==================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- ==========css========== -->
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+
+<body>
+<!-- =============================================================================== -->
+    <header id="bandeau" class="container">
+        <a href="accueil.html">
+            <img id="logo" src="image/logo_riantec.gif" alt="la-mairie">
+        </a>
+    <!-- =========================================menu====================================== -->
+        <nav id="menuprincipal">
+            <div id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="">
+                <li><a href="accueil.html" class="choix">Accueil</a></li>
+                <li><a href="Actualite.html">Actualités</a></li>
+                <li><a href="accueil.html">La mairie</a></li>
+                <li><a href="accueil.html">Tourisme</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- ===================================the main page==================================== -->
+    <main class="container">
+        <form action="page.php">
+            <p class="status">
+            
+                <input type="checkbox"><label for="madame">Madame</label>
+                <input type="checkbox"><label for="Monsieur">Monsieur</label>
+                
+            </p>
+      
+          <label for="name">Prénom</label>
+          <input type="text" id="name" name="firstname" placeholder="votre prénom..">
+      
+          <label for="lname">Nom</label>
+          <input type="text" id="lname" name="lastname" placeholder="votre nom..">
+      
+          <label for="contact">Contacter</label>
+          <select id="contact" name="contact">
+            <option value="the-town-hall"> La mairie</option>
+            <option value="social-assitance">Assistance sociale</option>
+            <option value="baby-sister">Assistance maternelle</option>
+          </select>
+      
+          <label for="subject">Sujet</label>
+          <textarea id="subject" name="subject" placeholder="écrivez quelque chose.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Envoyer">
+          <input type="submit" value="Annuler">
+      
+        </form>
+    </main> 
+
+
+    <!-- ================================footer===================================== -->
+    <footer id="pied"class="container" >
+
+        <!-- =================logo and menu============ -->
+        <aside id="bas" class="container">
+            <figure class="logobas">
+               
+            </figure>
+            <div class="colonne">
+                <h1>
+                    <a href="accueil.html">ville de riantec</a>
+                </h1>
+                   
+                    <div class="use-links">
+                      <li><a href="accueil.html"><i class="#"></i>Accueil</a></li>
+                      <li><a href="Actualite.html"><i class="#"></i>Actualités</a></li>
+                      <li><a href="contact.html"><i class="#"></i>Contact</a></li>
+                      <li><a href="mentionlégale.html"><i class="#"></i>Mention légale</a></li>
+                    </div>
+                  </div>
+
+                  <!-- ============réso social========================== -->
+        
+            <div class="colonne">
+                <h3>Nous suivre</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-twitter" style="color: #41a2f1;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook" style="color: #0909f2;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram" style="color: #8000ff;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin" style="color: #02156c;"></i></a></li>
+                </ul>
+
+            <!-- ===========================contact============================= -->
+                <div class="colonne">
+                    <h3>Adresse</h3>
+                    <address>
+                        Place de la Mairie<br>
+                        56670 Riantec<br>
+                        Tél. : 02 97 33 98 10 <br>
+                        Fax : 02 97 33 98 16<br>
+                        Mél. : contact@mairie-riantec.bzh
+                    </address>
+                </div>
+            </div>
+
+             <!-- ===============l'inscrire======================== -->
+            <div class="colonne">
+                <h3>contacter la mairie</h3>
+                <form action="newsletter.php" method="post">
+                    <p><input type="email" name="email-newsletter" placeholder="votre Email"></p>
+                    <p><input type="submit" value="S'INSCRIRE"></p>
+                </form>
+            </div>
+        </aside>
+       
+        
+    </footer>
+<!-- ===================================script============================================ -->
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        // ===============================script slider=================================
+        $(window).load(function () {
+           $('#slider').nivoSlider();
+       });
+
+    //    ============================script of buger and  a menu ===============================
+       $("#menuprincipal #burger i").click(function(){
+            $("#menuprincipal ul").slideToggle(1500);
+        });
+    
+    
+   </script> 
+    
+</body>
+</html>

@@ -1,0 +1,491 @@
+
+/* Pour éviter scroll horizontal EN:To avoid horizontal scroll*/
+html,body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:10px;
+}
+*{
+    margin:0; 
+    /* sets the margin area on all four sides of an element. 
+    ( top,right,bottom,left*/
+
+    padding:0;
+    /*sets the padding area on all four sides of an element at once.*/
+
+    box-sizing: border-box;
+    /*the padding and border in an element's total width and height.
+     If you set box-sizing: border-box; on an element, 
+     padding and border are included in the width and height:
+      Both divs are the same size*/
+}
+
+/* my font  from the google*/
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* my font from the google*/
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/poppins-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+/* ------------------accueil-------------- */
+ul{
+    list-style-type: none;
+    /* to delete points*/
+}
+
+a{
+    text-decoration: none; /* to delete underline*/
+    color:rgb(4, 45, 13);
+}
+
+.container{
+    max-width:1200px; /*Change the maximum width*/
+    width:100%;
+    margin:0 auto; /* to put the page on the center*/
+    
+}
+
+
+#bandeau{
+
+    display: flex;
+    justify-content: space-between; /* the menu moved on the right*/
+    align-items:center; /* the menu moved to the center*/
+    /* flex-wrap: wrap; */
+}
+#bandeau #logo{
+    width:60%;
+}
+#menuprincipal #burger {
+    display:none; /* hiding a buger*/
+   
+}
+#menuprincipal #burger i{
+    font-size:2.2rem;
+    
+}
+
+#menuprincipal ul{
+    display: flex; /* changed the menu to be horizontal*/
+   
+}
+#menuprincipal ul li a{
+    margin-left:35px;
+    font-size:3rem;
+    font-weight: 300;
+    width:50px;
+}
+#menuprincipal ul li a:hover,
+#menuprincipal ul li a.choix{
+    color:rgb(120, 210, 243);
+  
+}
+/* ------slider---------- */
+.slider-wrapper{
+    margin-top: 16px; 
+    background-color:rgb(203, 227, 243);
+}
+#slider h2{
+    display:none;
+    
+}
+
+/* ----------l’île-de-Kerner----------- */
+.l’île-de-Kerner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:40px;
+    box-shadow: 2px 5px 5px 2px rgba(0,0,0,.2) ;
+    transition: 0.3s;
+    background-color: #f6ebeb;
+    
+}
+
+.l’île-de-Kerner:hover{
+    box-shadow: 4px 8px 8px 4px rgba(0,0,0,.2) ;
+}
+.l’île-de-Kerner .textearticle1,
+.l’île-de-Kerner img{
+    width:49%;
+    grid-template-columns:repeat(auto-fill,290px);
+}
+.l’île-de-Kerner img{
+    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-right: 20px;
+    
+}
+.l’île-de-Kerner .textearticle1{
+    padding: 40px; /* moved the texts on the right*/
+    box-sizing: border-box;
+}
+.l’île-de-Kerner .textearticle1 h1{
+   
+    color:rgb(26, 24, 24);
+    text-transform: uppercase;
+    width:100%;
+    text-align: center;
+    font-size: 3rem;
+    padding:5px 5px 10px;
+}
+.l’île-de-Kerner .textearticle1 h2{
+  
+    color:rgba(45, 66, 227, 0.452);
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+    font-size: 2rem;
+    padding:5px 15px;
+}
+.l’île-de-Kerner .textearticle1 p{
+    margin:24px 0;
+    line-height:2rem;
+    font-size:1.5rem;
+}
+/* ----------l’île-de-Kerner----------- */
+
+/* ------------!!!!!!!!!------------ */
+
+.La-Maison-de-l’île-Kerner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:40px;
+    box-shadow: 2px 5px 5px 2px rgba(0,0,0,.2) ;
+    transition: 0.3s;
+    background-color: #f6ebeb;
+}
+/* ----------La-Maison-de-l’île-Kerner----------- */
+.La-Maison-de-l’île-Kerner:hover{
+    box-shadow: 4px 8px 8px 4px rgba(0,0,0,.2) ;
+}
+.La-Maison-de-l’île-Kerner .textearticle2,
+.La-Maison-de-l’île-Kerner img{
+    width:49%;
+   
+}
+
+.La-Maison-de-l’île-Kerner img{
+    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-right: 10px;
+}
+.La-Maison-de-l’île-Kerner .textearticle2{
+    padding: 40px; /* moved the texts on the right*/
+    box-sizing: border-box;/*manage padding without touch the width and the hight  */
+}
+
+.La-Maison-de-l’île-Kerner .textearticle2 h2{
+  
+    color:rgba(45, 66, 227, 0.452);
+    text-transform: uppercase; /* to changed style of text*/
+    width:90%;
+    text-align: center;
+    font-size: 2rem;
+    padding:5px 15px;
+}
+.La-Maison-de-l’île-Kerner .textearticle2 p{
+    margin:24px 0;
+    /* line-height:2rem; */
+    font-size:1.5rem;
+}
+/* ----------La-Maison-de-l’île-Kerner----------- */
+
+
+/* --------------------footer------ */
+#pied{
+    
+    background-color:white;
+    margin-top: 30px;
+    font-size: 1.8rem;
+   
+}
+#pied #bas{
+    display: flex;
+    flex-wrap:wrap-reverse; /* the position to be horizontal*/
+    justify-content: space-between;
+}
+#pied #bas .logobas{
+    width:100%;
+}
+#pied #bas .logobas img{
+    margin-top:40px;
+    width:10%;
+}
+#pied #bas .colonne .use-links{
+    font-size: 2rem;
+    text-align:left;
+   
+}
+#pied #bas .colonne h2{
+font-size: 2rem;
+
+}
+.colonne address{
+    font-size: 1.5rem;
+    margin: 6px;
+    color: rgb(45, 21, 4);
+}
+
+#pied #bas .colonne {
+    font-size: 2rem;
+}
+#pied #bas .colonne h3{
+    font-size:2rem;
+
+}
+#pied #bas .colonne ul{
+    display: flex;
+}
+#pied #bas .colonne p input{
+margin-top:15px;
+
+}
+#pied #bas .colonne form{
+
+    padding-left: 2px;
+   
+   
+}
+#pied #bas .colonne ul li a{
+    color:rgb(60, 33, 217);
+    font-size: 5rem;
+    margin:0 10px;
+}
+#pied #bas .colonne ul li a:hover{
+    opacity:1;
+}
+#pied #bas .colonne input{
+    padding:10px 10px;
+}
+#pied #bas .colonne input[type=email]{
+    width:50%;
+}
+#pied #bas .colonne input[type=submit]{
+
+    color:rgb(70, 37, 206);
+    border:none;
+    border-radius:20px;
+}
+ .use-links{
+    list-style-type: none;
+}
+#pied #bas .colonne h1 a:hover{
+    color:rgb(98, 162, 239);
+}
+#pied #bas .colonne .use-links li a:hover{
+    color:rgb(221, 194, 202);
+
+}
+
+
+#contenu{
+    margin-top: 15px;
+background-color: aliceblue;
+margin-top: 30px;
+
+}
+
+/* -------------mention legale-------- */
+
+#contenu .mention-legale .texts h1{
+    font-size: 3rem;
+    margin-top: 30px;
+}
+#contenu .mention-legale .texts p{
+    font-size: 1.9rem;
+}
+
+/* ---------------actulite---------- */
+
+ .actualite{
+    width:100%;
+    padding:10px;
+}
+.actualite h1{
+    font-size: 7rem;
+}
+.actualite p{
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+.image img{
+
+    margin-top: 80px;
+    display: flex;
+
+   
+   
+}
+
+/* --------------contact----------------- */
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 5px solid #0d383a; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 15px; /* Add a top margin */
+    margin-bottom: 70px; /* Bottom margin */
+    
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #8dec5a;
+    color: rgb(21, 19, 19);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+  /* When moving the mouse over the submit button, add a darker blue color */
+  input[type=submit]:hover {
+    background-color: #6b89dc;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+
+    border-radius: 5px;
+   
+    padding: 20px;
+    font-size: 3rem;
+    color: rgb(7, 7, 86);
+  } 
+  .container input{
+    font-size: 2rem;
+  }
+  .container option{
+    font-size: 1.7rem;
+  }
+  .container .status p{
+    margin-top: 30px;
+    
+  }
+
+  /* --------------mobile--------- */
+
+@media screen and (max-width:680px) {
+
+    #menuprincipal #burger{
+        display: block;
+        font-size:2rem;
+    }
+    #menuprincipal ul{
+        text-align: center;
+        flex-direction: column;
+         justify-content: center;
+         display: none;
+    }
+    #menuprincipal ul li a{
+       text-align: center;
+        font-size:2rem;
+        font-weight: 300;
+        width:0 auto;
+    }
+    .l’île-de-Kerner{
+       
+        display: flex;
+        flex-direction: column-reverse;  /*put the photo to the right*/
+        align-items:center; /*puted everything to the center */  
+    }
+    .l’île-de-Kerner .textearticle1 h1{
+   
+        color:rgb(26, 24, 24);
+        text-transform: uppercase;
+        width:100%;
+        text-align: center;
+        font-size: 2rem;
+       
+    }
+    .l’île-de-Kerner .textearticle1 h2{
+      
+        color:rgba(45, 66, 227, 0.452);
+        text-transform: uppercase;
+        width: 90%;
+        text-align: center;
+        font-size: 1.7rem;
+        padding:5px 15px;
+    }
+    .l’île-de-Kerner .textearticle1 p{
+        line-height:2rem;
+        font-size:1.5rem;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    
+    }
+    .l’île-de-Kerner .textearticle1,
+.l’île-de-Kerner img{
+    width:100%; /* this code related to origin of funtion destop*/
+
+}
+
+.La-Maison-de-l’île-Kerner{
+       
+    display: flex;
+    flex-direction: column-reverse;  /*puted the photo to the left or right*/
+    align-items:center; /*puted everything to the center */  
+}
+.La-Maison-de-l’île-Kerner .textearticle2 h1{
+
+    color:rgb(26, 24, 24);
+    text-transform: uppercase;
+    width:100%;
+    text-align: center;
+    font-size: 2rem;
+   
+}
+.La-Maison-de-l’île-Kerner .textearticle2 h2{
+  
+    color:rgba(45, 66, 227, 0.452);
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+    font-size: 1.7rem;
+    padding:5px 15px;
+}
+.La-Maison-de-l’île-Kerner .textearticle2 p{
+    line-height:2rem;
+    font-size:1.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+}
+.La-Maison-de-l’île-Kerner .textearticle2,
+.La-Maison-de-l’île-Kerner img{
+width:100%; /* this code related to origin of funtion destop*/
+
+}
+.actualite h1{
+    font-size: 3rem;
+ padding-bottom: 100px;
+.actualite h2{
+    font-size: 2rem;
+}
+}
+    
+}
+
+
+
+
+
+
